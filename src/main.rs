@@ -1,10 +1,8 @@
 use aes::Aes128;
 use cbc::cipher::{block_padding::Pkcs7, BlockDecryptMut, KeyIvInit};
 use libsql::{params, Builder, Connection, Database};
-use pbkdf2::pbkdf2_hmac;
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value as JsonValue};
-use sha1::Sha1;
 use sha2::{Digest, Sha256};
 use std::error::Error;
 use std::{
@@ -12,7 +10,7 @@ use std::{
     env,
     ffi::OsStr,
     path::{Path, PathBuf},
-    process::{Command as StdCommand, Stdio},
+    process::Stdio,
     time::{SystemTime, UNIX_EPOCH},
 };
 use tokio::{
