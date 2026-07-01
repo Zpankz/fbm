@@ -1,0 +1,9 @@
+{
+  "name": "fbm-bridge-checks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Development-only metadata for fbm bridge checks.",
+  "scripts": {
+    "check:bridge": "node --check src/fbm_js_bridge/bridge.js"
+  }
+}
